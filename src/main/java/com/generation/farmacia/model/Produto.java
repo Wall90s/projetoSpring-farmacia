@@ -1,5 +1,7 @@
 package com.generation.farmacia.model;
 
+import java.math.BigDecimal;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,7 +27,7 @@ public class Produto {
 	private String nome;
 
 	@NotNull(message = "O preço do produto não pode ficar vazio")
-	private float preco;
+	private BigDecimal preco;
 
 	@NotNull(message = "A quantidade do produto não pode ficar vazia")
 	private Long quantidade;
@@ -55,11 +57,11 @@ public class Produto {
 		this.nome = nome;
 	}
 
-	public float getPreco() {
+	public BigDecimal getPreco() {
 		return preco;
 	}
 
-	public void setPreco(float preco) {
+	public void setPreco(BigDecimal preco) {
 		this.preco = preco;
 	}
 
